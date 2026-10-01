@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="tr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modasilva Kids — Toptan Çocuk Giyim</title>
+<meta name="description" content="Modasilva Kids — Merter, İstanbul. Toptan çocuk giyim kataloğu. Wholesale kids clothing catalog.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fffaf5; --surface:#ffffff; --ink:#2b2340; --muted:#6f6886; --line:#efe6dc;
+  --brand:#ff6f61; --brand-ink:#ffffff; --brand-soft:#ffe3df;
+  --accent:#3bb3a8; --accent-soft:#dff4f1; --sun:#ffc94d;
+  --wa:#25d366; --shadow:0 6px 24px rgba(43,35,64,.08);
+  --radius:18px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1b1726; --surface:#251f33; --ink:#f4eff9; --muted:#b5abc6; --line:#3a3150;
+    --brand-soft:#4a2a33; --accent-soft:#1f3d3b; --shadow:0 6px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1b1726; --surface:#251f33; --ink:#f4eff9; --muted:#b5abc6; --line:#3a3150;
+  --brand-soft:#4a2a33; --accent-soft:#1f3d3b; --shadow:0 6px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito",system-ui,sans-serif;line-height:1.5;overflow-x:hidden}
+html[dir="rtl"] body{font-family:"Noto Kufi Arabic","Nunito",system-ui,sans-serif}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+/* demo ribbon */
+.ribbon{background:var(--ink);color:var(--bg);font-size:13px;text-align:center;padding:7px 16px}
+.ribbon b{color:var(--sun)}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:16px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-.3px}
+.logo-mark{width:38px;height:38px;border-radius:12px;background:var(--brand);display:grid;place-items:center;color:#fff;font-size:18px}
+.logo small{display:block;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.6px;text-transform:uppercase}
+.links{display:flex;gap:22px;margin-inline-start:auto}
+.links a{text-decoration:none;font-weight:700;color:var(--muted);font-size:15px}
+.links a:hover{color:var(--brand)}
+.langs{display:flex;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px}
+.langs button{border:0;background:transparent;color:var(--muted);font:inherit;font-weight:800;font-size:12px;padding:6px 10px;border-radius:999px;cursor:pointer}
+.langs button.on{background:var(--brand);color:#fff}
+.cart-btn{position:relative;border:0;background:var(--accent);color:#fff;font:inherit;font-weight:800;padding:9px 14px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.cart-btn .n{display:inline-grid;place-items:center;min-width:20px;height:20px;border-radius:99px;background:#fff;color:var(--accent);font-size:12px;margin-inline-start:6px;padding:0 5px}
+
+/* hero */
+.hero{padding:56px 0 36px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);color:var(--accent);font-weight:800;font-size:13px;padding:6px 12px;border-radius:999px}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.08;margin:16px 0 14px;letter-spacing:-1px}
+h1 em{font-style:normal;color:var(--brand)}
+html[dir="rtl"] h1{letter-spacing:0;line-height:1.35}
+.lead{font-size:18px;color:var(--muted);max-width:540px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;font:inherit;font-weight:800;font-size:16px;padding:14px 22px;border-radius:14px;cursor:pointer;text-decoration:none}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px rgba(255,111,97,.35)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-ghost{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.stats{display:flex;flex-wrap:wrap;gap:26px;margin-top:34px}
+.stat b{display:block;font-size:26px;font-weight:800}
+.stat span{color:var(--muted);font-size:14px}
+.hero-art{position:relative;aspect-ratio:1/1;border-radius:32px;background:var(--brand-soft);overflow:hidden}
+.hero-art .blob{position:absolute;border-radius:50%}
+.hero-art .card{position:absolute;background:var(--surface);border-radius:20px;box-shadow:var(--shadow);padding:10px}
+.hero-art .card svg{width:100%;height:auto}
+.badge-float{position:absolute;background:var(--surface);border-radius:14px;padding:10px 14px;box-shadow:var(--shadow);font-weight:800;font-size:14px;display:flex;gap:8px;align-items:center}
+
+/* trust strip */
+.strip{background:var(--surface);border-block:1px solid var(--line);padding:18px 0}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.strip-item{display:flex;gap:12px;align-items:center;font-weight:700;font-size:15px}
+.strip-item i{font-style:normal;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);font-size:20px;flex:none}
+
+/* sections */
+section{padding:64px 0;scroll-margin-top:70px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:26px}
+h2{font-size:clamp(26px,3.4vw,36px);margin:0;letter-spacing:-.5px}
+.sec-head p{margin:6px 0 0;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px;cursor:pointer}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* products */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.prod{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s, box-shadow .15s}
+.prod:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.prod-img{position:relative;aspect-ratio:4/5;display:grid;place-items:center;cursor:pointer}
+.prod-img svg{width:72%}
+.tag{position:absolute;top:12px;inset-inline-start:12px;background:var(--surface);font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px}
+.tag.new{background:var(--sun);color:#2b2340}
+.prod-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.code{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.5px}
+.prod h3{margin:0;font-size:17px;line-height:1.3}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.meta span{font-size:12px;font-weight:700;background:var(--bg);border:1px solid var(--line);padding:3px 8px;border-radius:8px}
+.swatches{display:flex;gap:6px}
+.swatches i{width:16px;height:16px;border-radius:50%;border:2px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+.prod-foot{margin-top:auto;display:flex;gap:8px;padding-top:6px}
+.prod-foot button{flex:1;border:0;font:inherit;font-weight:800;font-size:14px;padding:10px;border-radius:12px;cursor:pointer}
+.add{background:var(--brand-soft);color:var(--brand)}
+.add.in{background:var(--accent);color:#fff}
+.det{background:var(--bg);color:var(--ink);border:1px solid var(--line)!important}
+
+/* series explainer */
+.series{background:var(--accent-soft)}
+.series-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.size-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.size-table th,.size-table td{padding:12px 14px;text-align:start;border-bottom:1px solid var(--line);font-size:15px}
+.size-table th{background:var(--ink);color:var(--bg);font-size:13px;text-transform:uppercase;letter-spacing:.5px}
+.size-table tr:last-child td{border-bottom:0}
+.series-boxes{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+.series-boxes div{background:var(--surface);border-radius:14px;padding:12px 16px;text-align:center;box-shadow:var(--shadow);min-width:70px}
+.series-boxes b{display:block;font-size:20px}
+.series-boxes span{font-size:12px;color:var(--muted);font-weight:700}
+.steps{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+.steps li{display:flex;gap:12px;align-items:flex-start}
+.steps li b{flex:none;width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:14px}
+
+/* quote form */
+.quote-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:var(--shadow)}
+.panel h3{margin:0 0 12px}
+.empty{color:var(--muted);font-size:15px;padding:18px;border:2px dashed var(--line);border-radius:14px;text-align:center}
+.qitem{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.qitem:last-child{border-bottom:0}
+.qthumb{width:52px;height:60px;border-radius:10px;display:grid;place-items:center;flex:none}
+.qthumb svg{width:80%}
+.qinfo{flex:1;min-width:0}
+.qinfo b{display:block;font-size:14px}
+.qinfo small{color:var(--muted);font-size:12px}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:28px;height:28px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-weight:800;cursor:pointer}
+.qty span{min-width:22px;text-align:center;font-weight:800}
+.qty small{color:var(--muted);font-size:11px}
+.rm{border:0;background:none;color:var(--muted);cursor:pointer;font-size:18px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font-weight:700;font-size:14px}
+label.full{grid-column:1/-1}
+input,select,textarea{font:inherit;font-weight:600;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+textarea{min-height:90px;resize:vertical}
+.form-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px}
+.hint{grid-column:1/-1;color:var(--muted);font-size:13px;margin:0}
+.ok{grid-column:1/-1;background:var(--accent-soft);color:var(--accent);font-weight:800;padding:12px 14px;border-radius:12px;display:none}
+
+/* about / contact */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.info-list{display:grid;gap:14px;margin-top:16px}
+.info-list div{display:flex;gap:12px;align-items:flex-start}
+.info-list i{font-style:normal;font-size:20px;width:40px;height:40px;border-radius:12px;background:var(--brand-soft);display:grid;place-items:center;flex:none}
+.info-list b{display:block}
+.info-list span{color:var(--muted);font-size:15px}
+.map{border-radius:24px;overflow:hidden;min-height:300px;background:
+  linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/40px 40px,
+  linear-gradient(var(--line) 1px,transparent 1px) 0 0/40px 40px,var(--surface);
+  border:1px solid var(--line);position:relative;display:grid;place-items:center}
+.map .pin{background:var(--brand);color:#fff;font-weight:800;padding:10px 16px;border-radius:14px;box-shadow:var(--shadow)}
+.map .pin:after{content:"";display:block;width:14px;height:14px;background:var(--brand);transform:rotate(45deg);margin:4px auto -17px}
+
+footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--muted);font-size:14px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* WhatsApp float */
+.wa-float{position:fixed;bottom:20px;inset-inline-end:20px;z-index:40;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;font-weight:800;padding:14px 18px;border-radius:999px;box-shadow:0 10px 30px rgba(37,211,102,.45)}
+.wa-float svg{width:24px;height:24px}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:50;background:rgba(20,15,30,.55);display:none;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.modal-box{background:var(--surface);border-radius:26px;max-width:860px;width:100%;max-height:90vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;position:relative}
+.modal-img{display:grid;place-items:center;min-height:320px}
+.modal-img svg{width:70%}
+.modal-body{padding:28px;display:grid;gap:12px;align-content:start}
+.modal-body h3{margin:0;font-size:24px}
+.x{position:absolute;top:12px;inset-inline-end:12px;width:38px;height:38px;border-radius:50%;border:0;background:var(--bg);color:var(--ink);font-size:20px;cursor:pointer;z-index:2}
+.spec{width:100%;border-collapse:collapse;font-size:14px}
+.spec td{padding:8px 0;border-bottom:1px solid var(--line)}
+.spec td:first-child{color:var(--muted);font-weight:700;width:45%}
+
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:12px;font-weight:700;opacity:0;transition:.25s;z-index:60;pointer-events:none;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media (max-width:980px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .links{display:none}
+  .hero-grid,.series-grid,.quote-grid,.about-grid{grid-template-columns:1fr}
+  .hero-art{max-width:460px;width:100%;margin:0 auto}
+  .strip-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .nav{gap:8px;height:auto;padding:10px 0;flex-wrap:wrap}
+  .langs{order:3;width:100%;justify-content:space-between}
+  .langs button{flex:1}
+  .cart-btn{margin-inline-start:auto}
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .prod-body{padding:12px}
+  .prod h3{font-size:15px}
+  .prod-foot{flex-direction:column}
+  form{grid-template-columns:1fr}
+  .modal-box{grid-template-columns:1fr}
+  .modal-img{min-height:220px}
+  .wa-float span{display:none}
+  .wa-float{padding:16px}
+  .hero{padding-top:32px}
+  section{padding:48px 0;scroll-margin-top:120px}
+  .size-table th,.size-table td{padding:10px 8px;font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon" data-i18n="ribbon"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <span class="logo-mark">✿</span>
+      <span>Modasilva Kids<small data-i18n="logoSub"></small></span>
+    </a>
+    <nav class="links">
+      <a href="#catalog" data-i18n="navCatalog"></a>
+      <a href="#series" data-i18n="navSeries"></a>
+      <a href="#quote" data-i18n="navQuote"></a>
+      <a href="#contact" data-i18n="navContact"></a>
+    </nav>
+    <div class="langs" role="group" aria-label="Language">
+      <button data-lang="tr">TR</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ru">RU</button>
+      <button data-lang="ar">AR</button>
+    </div>
+    <button class="cart-btn" onclick="location.hash='quote'"><span data-i18n="cartBtn"></span><span class="n" id="cartN">0</span></button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill">📍 <span data-i18n="heroPill"></span></span>
+        <h1 data-i18n-html="heroTitle"></h1>
+        <p class="lead" data-i18n="heroLead"></p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#catalog" data-i18n="heroCta1"></a>
+          <a class="btn btn-wa wa-link" target="_blank" rel="noopener"><span>💬</span><span data-i18n="heroCta2"></span></a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>1–12</b><span data-i18n="statAge"></span></div>
+          <div class="stat"><b data-i18n="statSeriesVal"></b><span data-i18n="statSeries"></span></div>
+          <div class="stat"><b>🌍</b><span data-i18n="statShip"></span></div>
+        </div>
+      </div>
+      <div class="hero-art" id="heroArt" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="wrap strip-grid">
+      <div class="strip-item"><i>🏭</i><span data-i18n="trust1"></span></div>
+      <div class="strip-item"><i>📦</i><span data-i18n="trust2"></span></div>
+      <div class="strip-item"><i>🚚</i><span data-i18n="trust3"></span></div>
+      <div class="strip-item"><i>💬</i><span data-i18n="trust4"></span></div>
+    </div>
+  </div>
+
+  <!-- CATALOG -->
+  <section id="catalog">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 data-i18n="catTitle"></h2>
+          <p data-i18n="catSub"></p>
+        </div>
+        <div class="filters" id="filters"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- SERIES -->
+  <section id="series" class="series">
+    <div class="wrap series-grid">
+      <div>
+        <h2 data-i18n="serTitle"></h2>
+        <p class="lead" data-i18n="serLead"></p>
+        <div class="series-boxes">
+          <div><b>2</b><span data-i18n="ageY"></span></div>
+          <div><b>3</b><span data-i18n="ageY"></span></div>
+          <div><b>4</b><span data-i18n="ageY"></span></div>
+          <div><b>5</b><span data-i18n="ageY"></span></div>
+        </div>
+        <ul class="steps">
+          <li><b>1</b><span data-i18n="step1"></span></li>
+          <li><b>2</b><span data-i18n="step2"></span></li>
+          <li><b>3</b><span data-i18n="step3"></span></li>
+        </ul>
+      </div>
+      <table class="size-table">
+        <thead><tr><th data-i18n="thGroup"></th><th data-i18n="thSizes"></th><th data-i18n="thPack"></th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="grpBaby"></td><td>6-9 / 9-12 / 12-18 / 18-24 <span data-i18n="monthShort"></span></td><td data-i18n="pack4"></td></tr>
+          <tr><td data-i18n="grpSmall"></td><td>2 / 3 / 4 / 5 <span data-i18n="yearShort"></span></td><td data-i18n="pack4"></td></tr>
+          <tr><td data-i18n="grpMid"></td><td>6 / 7 / 8 / 9 <span data-i18n="yearShort"></span></td><td data-i18n="pack4"></td></tr>
+          <tr><td data-i18n="grpBig"></td><td>9 / 10 / 11 / 12 <span data-i18n="yearShort"></span></td><td data-i18n="pack4"></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section id="quote">
+    <div class="wrap">
+      <div class="sec-head"><div><h2 data-i18n="qTitle"></h2><p data-i18n="qSub"></p></div></div>
+      <div class="quote-grid">
+        <div class="panel">
+          <h3 data-i18n="qList"></h3>
+          <div id="qlist"></div>
+        </div>
+        <div class="panel">
+          <form id="qform" novalidate>
+            <label><span data-i18n="fName"></span><input name="name" required autocomplete="name"></label>
+            <label><span data-i18n="fCompany"></span><input name="company" autocomplete="organization"></label>
+            <label><span data-i18n="fCountry"></span>
+              <select name="country" id="countrySel"></select>
+            </label>
+            <label><span data-i18n="fPhone"></span><input name="phone" type="tel" required autocomplete="tel" placeholder="+90 5xx xxx xx xx"></label>
+            <label class="full"><span data-i18n="fNote"></span><textarea name="note"></textarea></label>
+            <p class="hint" data-i18n="fHint"></p>
+            <div class="form-actions">
+              <button class="btn btn-wa" type="submit"><span>💬</span><span data-i18n="fSendWa"></span></button>
+              <button class="btn btn-ghost" type="button" id="sendForm" data-i18n="fSend"></button>
+            </div>
+            <div class="ok" id="okMsg" data-i18n="fOk"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="padding-top:0">
+    <div class="wrap about-grid">
+      <div class="panel">
+        <h2 data-i18n="abTitle"></h2>
+        <p style="color:var(--muted)" data-i18n="abText"></p>
+        <div class="info-list">
+          <div><i>📍</i><p style="margin:0"><b data-i18n="cAddr"></b><span>Merter, Güngören / İstanbul</span></p></div>
+          <div><i>🕘</i><p style="margin:0"><b data-i18n="cHours"></b><span data-i18n="cHoursVal"></span></p></div>
+          <div><i>💬</i><p style="margin:0"><b>WhatsApp</b><span data-i18n="cWa"></span></p></div>
+          <div><i>🗣️</i><p style="margin:0"><b data-i18n="cLang"></b><span>Türkçe · English · Русский · العربية</span></p></div>
+        </div>
+        <div class="cta"><a class="btn btn-wa wa-link" target="_blank" rel="noopener"><span>💬</span><span data-i18n="heroCta2"></span></a></div>
+      </div>
+      <div class="map"><div class="pin">Modasilva Kids · Merter</div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Modasilva Kids · Merter, İstanbul</span>
+    <span data-i18n="footDemo"></span>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.24 8.24 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>
+  <span data-i18n="waFloat"></span>
+</a>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="x" onclick="closeModal()" aria-label="Close">×</button>
+    <div class="modal-img" id="mImg"></div>
+    <div class="modal-body" id="mBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ======== AYARLAR / SETTINGS ========
+   Gerçek WhatsApp numarasını buraya yazın (ülke kodu ile, + ve boşluk olmadan). */
+const WHATSAPP = "905000000000";
+
+/* ======== ÇEVİRİLER / TRANSLATIONS ======== */
+const T = {
+tr:{
+  ribbon:"Bu sayfa <b>Modasilva Kids</b> için hazırlanmış bir <b>demo</b>dur — ürün görselleri ve bilgiler örnektir.",
+  logoSub:"Toptan Çocuk Giyim · Merter",
+  navCatalog:"Katalog",navSeries:"Seri & Beden",navQuote:"Fiyat Talebi",navContact:"İletişim",
+  cartBtn:"Teklif Listesi",
+  heroPill:"Merter, İstanbul · Üretici & Toptancı",
+  heroTitle:"Çocuklar için <em>renkli</em>, kaliteli toptan giyim",
+  heroLead:"Bebek, kız ve erkek çocuk koleksiyonlarımızı seri halinde dünyanın her yerine gönderiyoruz. Kataloğu inceleyin, ürünleri seçin, fiyat teklifini WhatsApp'tan alın.",
+  heroCta1:"Kataloğu İncele",heroCta2:"WhatsApp'tan Yaz",
+  statAge:"yaş aralığı",statSeriesVal:"4'lü",statSeries:"seri satış",statShip:"yurt dışına kargo",
+  trust1:"Kendi üretimimiz",trust2:"Seri halinde toptan satış",trust3:"Dünya geneline kargo",trust4:"TR · EN · RU · AR destek",
+  catTitle:"Yeni Sezon Kataloğu",catSub:"Ürüne tıklayın, detayları görün ve teklif listenize ekleyin.",
+  fAll:"Tümü",fBaby:"Bebek",fGirl:"Kız Çocuk",fBoy:"Erkek Çocuk",fSet:"Takımlar",
+  tagNew:"Yeni",tagBest:"Çok Satan",
+  add:"Listeye Ekle",added:"✓ Listede",details:"Detay",
+  series:"Seri",sizes:"Bedenler",fabric:"Kumaş",colors:"Renkler",minOrder:"Min. sipariş",perSeries:"adet / seri",series1:"1 seri",
+  priceOnReq:"Fiyat: talep üzerine",
+  serTitle:"Seri & beden sistemi nasıl çalışır?",
+  serLead:"Toptan satışlarımız seri halindedir: bir seri, aynı modelin her bedeninden 1 adet içerir. Örneğin 2-5 yaş serisi 4 adettir.",
+  ageY:"yaş",step1:"Katalogdan modeli ve rengi seçin.",step2:"Kaç seri istediğinizi belirtin.",step3:"Fiyat teklifini ve kargo bilgisini WhatsApp'tan alın.",
+  thGroup:"Grup",thSizes:"Bedenler",thPack:"Seri",grpBaby:"Bebek",grpSmall:"Küçük çocuk",grpMid:"Çocuk",grpBig:"Genç",
+  pack4:"4 adet",monthShort:"ay",yearShort:"yaş",
+  qTitle:"Fiyat Talep Formu",qSub:"Listenizi oluşturun, bilgilerinizi bırakın — teklifimizi hızlıca iletelim.",
+  qList:"Teklif listeniz",qEmpty:"Henüz ürün eklemediniz. Katalogdan “Listeye Ekle” ile ürün seçin.",
+  fName:"Ad Soyad",fCompany:"Firma / Mağaza",fCountry:"Ülke",fPhone:"Telefon / WhatsApp",fNote:"Not (renk, adet, teslim tarihi…)",
+  fHint:"Formu gönderdiğinizde talebiniz hazır bir mesaj olarak WhatsApp'ta açılır.",
+  fSendWa:"WhatsApp ile Gönder",fSend:"Formu Gönder",fOk:"Teşekkürler! Talebiniz alındı, en kısa sürede dönüş yapacağız.",
+  fErr:"Lütfen ad ve telefon alanlarını doldurun.",
+  abTitle:"Modasilva Kids hakkında",
+  abText:"İstanbul Merter'de çocuk giyim üretimi ve toptan satışı yapıyoruz. Türkiye'nin yanı sıra Avrupa, Orta Doğu, Rusya ve Orta Asya'daki mağazalara ürün gönderiyoruz.",
+  cAddr:"Adres",cHours:"Çalışma saatleri",cHoursVal:"Pzt–Cmt · 09:00–19:00",cWa:"Fiyat, stok ve sipariş için yazın",cLang:"Konuştuğumuz diller",
+  footDemo:"Demo — Ferhat tarafından hazırlanmıştır",waFloat:"WhatsApp",
+  toastAdd:"Teklif listesine eklendi",
+  waHello:"Merhaba Modasilva Kids, web sitenizden yazıyorum.",
+  waQuote:"Merhaba Modasilva Kids, aşağıdaki ürünler için fiyat teklifi rica ediyorum:",
+  waProduct:"Şu ürün için fiyat almak istiyorum:",
+  wName:"Ad",wCompany:"Firma",wCountry:"Ülke",wPhone:"Telefon",wNote:"Not",
+  countries:["Türkiye","Azerbaycan","Irak","Suudi Arabistan","BAE","Rusya","Kazakistan","Almanya","Diğer"]
+},
+en:{
+  ribbon:"This page is a <b>demo</b> prepared for <b>Modasilva Kids</b> — product images and details are samples.",
+  logoSub:"Wholesale Kids Clothing · Merter",
+  navCatalog:"Catalog",navSeries:"Series & Sizes",navQuote:"Request Price",navContact:"Contact",
+  cartBtn:"Quote List",
+  heroPill:"Merter, Istanbul · Manufacturer & Wholesaler",
+  heroTitle:"<em>Colorful</em>, quality wholesale clothing for kids",
+  heroLead:"We ship our baby, girls' and boys' collections in size series all over the world. Browse the catalog, pick your models and get your price quote on WhatsApp.",
+  heroCta1:"Browse Catalog",heroCta2:"Chat on WhatsApp",
+  statAge:"age range",statSeriesVal:"4-pc",statSeries:"size series",statShip:"worldwide shipping",
+  trust1:"Our own production",trust2:"Wholesale by size series",trust3:"Worldwide shipping",trust4:"TR · EN · RU · AR support",
+  catTitle:"New Season Catalog",catSub:"Tap a product to see details and add it to your quote list.",
+  fAll:"All",fBaby:"Baby",fGirl:"Girls",fBoy:"Boys",fSet:"Sets",
+  tagNew:"New",tagBest:"Best seller",
+  add:"Add to List",added:"✓ In list",details:"Details",
+  series:"Series",sizes:"Sizes",fabric:"Fabric",colors:"Colors",minOrder:"Min. order",perSeries:"pcs / series",series1:"1 series",
+  priceOnReq:"Price: on request",
+  serTitle:"How does the size series system work?",
+  serLead:"We sell wholesale in series: one series contains 1 piece of the same model in every size. For example, a 2–5 years series is 4 pieces.",
+  ageY:"years",step1:"Choose the model and color from the catalog.",step2:"Tell us how many series you need.",step3:"Get the price quote and shipping info on WhatsApp.",
+  thGroup:"Group",thSizes:"Sizes",thPack:"Series",grpBaby:"Baby",grpSmall:"Toddler",grpMid:"Kids",grpBig:"Junior",
+  pack4:"4 pcs",monthShort:"months",yearShort:"yrs",
+  qTitle:"Price Request Form",qSub:"Build your list, leave your details — we'll send our quote quickly.",
+  qList:"Your quote list",qEmpty:"No products yet. Use “Add to List” in the catalog.",
+  fName:"Full name",fCompany:"Company / Store",fCountry:"Country",fPhone:"Phone / WhatsApp",fNote:"Note (colors, quantity, delivery date…)",
+  fHint:"When you submit, your request opens in WhatsApp as a ready-to-send message.",
+  fSendWa:"Send via WhatsApp",fSend:"Submit Form",fOk:"Thank you! Your request has been received, we'll get back to you shortly.",
+  fErr:"Please fill in your name and phone.",
+  abTitle:"About Modasilva Kids",
+  abText:"We manufacture and wholesale children's clothing in Merter, Istanbul. Besides Turkey, we supply stores in Europe, the Middle East, Russia and Central Asia.",
+  cAddr:"Address",cHours:"Working hours",cHoursVal:"Mon–Sat · 09:00–19:00",cWa:"Message us for prices, stock and orders",cLang:"Languages we speak",
+  footDemo:"Demo — prepared by Ferhat",waFloat:"WhatsApp",
+  toastAdd:"Added to quote list",
+  waHello:"Hello Modasilva Kids, I'm writing from your website.",
+  waQuote:"Hello Modasilva Kids, I'd like a price quote for the following products:",
+  waProduct:"I'd like a price for this product:",
+  wName:"Name",wCompany:"Company",wCountry:"Country",wPhone:"Phone",wNote:"Note",
+  countries:["Turkey","Azerbaijan","Iraq","Saudi Arabia","UAE","Russia","Kazakhstan","Germany","Other"]
+},
+ru:{
+  ribbon:"Эта страница — <b>демо</b>, подготовленное для <b>Modasilva Kids</b>; фото и данные товаров приведены как пример.",
+  logoSub:"Детская одежда оптом · Мертер",
+  navCatalog:"Каталог",navSeries:"Ростовки и размеры",navQuote:"Запрос цены",navContact:"Контакты",
+  cartBtn:"Список",
+  heroPill:"Мертер, Стамбул · Производитель и оптовик",
+  heroTitle:"<em>Яркая</em> и качественная детская одежда оптом",
+  heroLead:"Отправляем коллекции для малышей, девочек и мальчиков ростовками по всему миру. Смотрите каталог, выбирайте модели и получайте цену в WhatsApp.",
+  heroCta1:"Смотреть каталог",heroCta2:"Написать в WhatsApp",
+  statAge:"лет — возраст",statSeriesVal:"4 шт",statSeries:"в ростовке",statShip:"доставка по миру",
+  trust1:"Собственное производство",trust2:"Опт ростовками",trust3:"Доставка по всему миру",trust4:"Поддержка TR · EN · RU · AR",
+  catTitle:"Каталог нового сезона",catSub:"Нажмите на товар, чтобы увидеть детали и добавить его в список.",
+  fAll:"Все",fBaby:"Малыши",fGirl:"Девочки",fBoy:"Мальчики",fSet:"Комплекты",
+  tagNew:"Новинка",tagBest:"Хит продаж",
+  add:"В список",added:"✓ В списке",details:"Подробнее",
+  series:"Ростовка",sizes:"Размеры",fabric:"Ткань",colors:"Цвета",minOrder:"Мин. заказ",perSeries:"шт / ростовка",series1:"1 ростовка",
+  priceOnReq:"Цена: по запросу",
+  serTitle:"Как работает продажа ростовками?",
+  serLead:"Оптом продаём ростовками: одна ростовка — это по 1 штуке одной модели каждого размера. Например, ростовка 2–5 лет — 4 штуки.",
+  ageY:"лет",step1:"Выберите модель и цвет в каталоге.",step2:"Укажите нужное количество ростовок.",step3:"Получите цену и условия доставки в WhatsApp.",
+  thGroup:"Группа",thSizes:"Размеры",thPack:"Ростовка",grpBaby:"Малыши",grpSmall:"Ясли-сад",grpMid:"Дети",grpBig:"Подростки",
+  pack4:"4 шт",monthShort:"мес",yearShort:"лет",
+  qTitle:"Форма запроса цены",qSub:"Составьте список, оставьте контакты — мы быстро пришлём предложение.",
+  qList:"Ваш список",qEmpty:"Товары пока не добавлены. Нажмите «В список» в каталоге.",
+  fName:"Имя и фамилия",fCompany:"Компания / магазин",fCountry:"Страна",fPhone:"Телефон / WhatsApp",fNote:"Комментарий (цвета, количество, срок…)",
+  fHint:"После отправки запрос откроется в WhatsApp как готовое сообщение.",
+  fSendWa:"Отправить в WhatsApp",fSend:"Отправить форму",fOk:"Спасибо! Запрос получен, мы скоро свяжемся с вами.",
+  fErr:"Пожалуйста, укажите имя и телефон.",
+  abTitle:"О Modasilva Kids",
+  abText:"Мы производим и продаём оптом детскую одежду в Мертере, Стамбул. Помимо Турции, поставляем товар в магазины Европы, Ближнего Востока, России и Средней Азии.",
+  cAddr:"Адрес",cHours:"Часы работы",cHoursVal:"Пн–Сб · 09:00–19:00",cWa:"Пишите о ценах, наличии и заказах",cLang:"Языки общения",
+  footDemo:"Демо — подготовил Ferhat",waFloat:"WhatsApp",
+  toastAdd:"Добавлено в список",
+  waHello:"Здравствуйте, Modasilva Kids! Пишу с вашего сайта.",
+  waQuote:"Здравствуйте, Modasilva Kids! Прошу прислать цены на следующие товары:",
+  waProduct:"Хочу узнать цену на этот товар:",
+  wName:"Имя",wCompany:"Компания",wCountry:"Страна",wPhone:"Телефон",wNote:"Комментарий",
+  countries:["Турция","Азербайджан","Ирак","Саудовская Аравия","ОАЭ","Россия","Казахстан","Германия","Другая"]
+},
+ar:{
+  ribbon:"هذه الصفحة <b>نسخة تجريبية</b> مُعدّة لـ <b>Modasilva Kids</b> — صور المنتجات ومعلوماتها للعرض فقط.",
+  logoSub:"ملابس أطفال بالجملة · ميرتر",
+  navCatalog:"الكتالوج",navSeries:"السيريات والمقاسات",navQuote:"طلب سعر",navContact:"اتصل بنا",
+  cartBtn:"قائمة العرض",
+  heroPill:"ميرتر، إسطنبول · مصنع وتاجر جملة",
+  heroTitle:"ملابس أطفال <em>ملوّنة</em> وعالية الجودة بالجملة",
+  heroLead:"نشحن مجموعات الرضّع والبنات والأولاد بالسيري إلى جميع أنحاء العالم. تصفّح الكتالوج، اختر الموديلات، واحصل على عرض السعر عبر واتساب.",
+  heroCta1:"تصفّح الكتالوج",heroCta2:"راسلنا على واتساب",
+  statAge:"الفئة العمرية (سنة)",statSeriesVal:"٤ قطع",statSeries:"في السيري",statShip:"شحن دولي",
+  trust1:"إنتاجنا الخاص",trust2:"بيع بالجملة بالسيري",trust3:"شحن إلى كل العالم",trust4:"دعم TR · EN · RU · AR",
+  catTitle:"كتالوج الموسم الجديد",catSub:"اضغط على المنتج لعرض التفاصيل وإضافته إلى قائمة العرض.",
+  fAll:"الكل",fBaby:"رضّع",fGirl:"بنات",fBoy:"أولاد",fSet:"أطقم",
+  tagNew:"جديد",tagBest:"الأكثر مبيعاً",
+  add:"أضف للقائمة",added:"✓ في القائمة",details:"التفاصيل",
+  series:"السيري",sizes:"المقاسات",fabric:"القماش",colors:"الألوان",minOrder:"الحد الأدنى",perSeries:"قطع / سيري",series1:"سيري واحد",
+  priceOnReq:"السعر: عند الطلب",
+  serTitle:"كيف يعمل نظام السيري والمقاسات؟",
+  serLead:"نبيع بالجملة على شكل سيريات: السيري الواحد يحتوي على قطعة واحدة من نفس الموديل بكل مقاس. مثلاً سيري ٢–٥ سنوات = ٤ قطع.",
+  ageY:"سنوات",step1:"اختر الموديل واللون من الكتالوج.",step2:"حدّد عدد السيريات المطلوبة.",step3:"احصل على عرض السعر ومعلومات الشحن عبر واتساب.",
+  thGroup:"الفئة",thSizes:"المقاسات",thPack:"السيري",grpBaby:"رضّع",grpSmall:"أطفال صغار",grpMid:"أطفال",grpBig:"ناشئون",
+  pack4:"٤ قطع",monthShort:"شهر",yearShort:"سنة",
+  qTitle:"نموذج طلب السعر",qSub:"أنشئ قائمتك واترك بياناتك — وسنرسل لك عرضنا بسرعة.",
+  qList:"قائمة العرض الخاصة بك",qEmpty:"لم تُضف أي منتج بعد. استخدم «أضف للقائمة» في الكتالوج.",
+  fName:"الاسم الكامل",fCompany:"الشركة / المتجر",fCountry:"الدولة",fPhone:"الهاتف / واتساب",fNote:"ملاحظة (الألوان، الكمية، موعد التسليم…)",
+  fHint:"عند الإرسال، يُفتح طلبك في واتساب كرسالة جاهزة.",
+  fSendWa:"إرسال عبر واتساب",fSend:"إرسال النموذج",fOk:"شكراً لك! تم استلام طلبك وسنتواصل معك قريباً.",
+  fErr:"يرجى إدخال الاسم ورقم الهاتف.",
+  abTitle:"عن Modasilva Kids",
+  abText:"نقوم بإنتاج وبيع ملابس الأطفال بالجملة في ميرتر، إسطنبول. إلى جانب تركيا، نورّد للمتاجر في أوروبا والشرق الأوسط وروسيا وآسيا الوسطى.",
+  cAddr:"العنوان",cHours:"ساعات العمل",cHoursVal:"الإثنين–السبت · 09:00–19:00",cWa:"راسلنا للأسعار والمخزون والطلبات",cLang:"اللغات التي نتحدثها",
+  footDemo:"نسخة تجريبية — من إعداد Ferhat",waFloat:"واتساب",
+  toastAdd:"تمت الإضافة إلى قائمة العرض",
+  waHello:"مرحباً Modasilva Kids، أكتب لكم من موقعكم الإلكتروني.",
+  waQuote:"مرحباً Modasilva Kids، أرجو إرسال عرض سعر للمنتجات التالية:",
+  waProduct:"أرغب بمعرفة سعر هذا المنتج:",
+  wName:"الاسم",wCompany:"الشركة",wCountry:"الدولة",wPhone:"الهاتف",wNote:"ملاحظة",
+  countries:["تركيا","أذربيجان","العراق","السعودية","الإمارات","روسيا","كازاخستان","ألمانيا","أخرى"]
+}};
+
+/* ======== ÜRÜNLER / PRODUCTS (örnek — gerçek ürünlerle değiştirilecek) ======== */
+const P = [
+ {id:"MS-2601",cat:"girl",shape:"dress",tag:"new",bg:"#ffe3df",c:["#ff8fa3","#ffd166","#a0c4ff"],sizes:"2-3-4-5",
+  name:{tr:"Çiçek Desenli Kız Elbise",en:"Floral Girls' Dress",ru:"Платье для девочки с цветами",ar:"فستان بنات بنقشة ورود"},
+  fabric:{tr:"%100 Pamuk Poplin",en:"100% Cotton Poplin",ru:"100% хлопок, поплин",ar:"قطن ١٠٠٪ بوبلين"}},
+ {id:"MS-2602",cat:"boy",shape:"set",tag:"best",bg:"#dff4f1",c:["#4d96ff","#6bcb77","#2b2340"],sizes:"2-3-4-5",
+  name:{tr:"Erkek Çocuk Eşofman Takımı",en:"Boys' Tracksuit Set",ru:"Спортивный костюм для мальчика",ar:"طقم رياضي للأولاد"},
+  fabric:{tr:"İki İplik, %95 Pamuk",en:"Two-thread, 95% Cotton",ru:"Двухнитка, 95% хлопок",ar:"قماش خيطين، قطن ٩٥٪"}},
+ {id:"MS-2603",cat:"baby",shape:"romper",tag:"new",bg:"#fff4d6",c:["#ffd166","#ffffff","#a0c4ff"],sizes:"6-9 / 9-12 / 12-18 / 18-24",baby:true,
+  name:{tr:"Bebek Tulum – Ayıcıklı",en:"Baby Romper – Teddy",ru:"Боди-комбинезон «Мишка»",ar:"أوفرول رضّع – دبدوب"},
+  fabric:{tr:"%100 Organik Pamuk",en:"100% Organic Cotton",ru:"100% органический хлопок",ar:"قطن عضوي ١٠٠٪"}},
+ {id:"MS-2604",cat:"girl",shape:"set",bg:"#f3e8ff",c:["#c77dff","#ff8fa3","#ffffff"],sizes:"6-7-8-9",
+  name:{tr:"Kız Çocuk Tunik Tayt Takım",en:"Girls' Tunic & Leggings Set",ru:"Комплект туника + легинсы",ar:"طقم تونيك وليقنز للبنات"},
+  fabric:{tr:"Penye, %95 Pamuk %5 Likra",en:"Jersey, 95% Cotton 5% Elastane",ru:"Кулирка, 95% хлопок 5% эластан",ar:"قطن ٩٥٪ وليكرا ٥٪"}},
+ {id:"MS-2605",cat:"boy",shape:"tee",bg:"#e3f0ff",c:["#4d96ff","#ff6f61","#ffd166"],sizes:"2-3-4-5",
+  name:{tr:"Baskılı Erkek T-Shirt",en:"Printed Boys' T-Shirt",ru:"Футболка с принтом для мальчика",ar:"تيشيرت أولاد مطبوع"},
+  fabric:{tr:"%100 Pamuk Süprem",en:"100% Cotton Single Jersey",ru:"100% хлопок, супрем",ar:"قطن ١٠٠٪ سوبريم"}},
+ {id:"MS-2606",cat:"girl",shape:"hoodie",tag:"best",bg:"#ffe3df",c:["#ff8fa3","#e9e4f0","#6bcb77"],sizes:"9-10-11-12",
+  name:{tr:"Kapüşonlu Kız Sweatshirt",en:"Girls' Hooded Sweatshirt",ru:"Худи для девочки",ar:"سويت شيرت بنات بقبعة"},
+  fabric:{tr:"Üç İplik Şardonlu",en:"Three-thread Fleece",ru:"Трёхнитка с начёсом",ar:"قماش ثلاث خيوط مبطّن"}},
+ {id:"MS-2607",cat:"baby",shape:"set",bg:"#dff4f1",c:["#6bcb77","#ffd166","#ffffff"],sizes:"6-9 / 9-12 / 12-18 / 18-24",baby:true,
+  name:{tr:"Bebek 3'lü Zıbın Seti",en:"Baby 3-piece Set",ru:"Набор для малыша из 3 предметов",ar:"طقم رضّع ٣ قطع"},
+  fabric:{tr:"%100 Pamuk İnterlok",en:"100% Cotton Interlock",ru:"100% хлопок, интерлок",ar:"قطن ١٠٠٪ إنترلوك"}},
+ {id:"MS-2608",cat:"boy",shape:"jacket",tag:"new",bg:"#e9e4f0",c:["#2b2340","#4d96ff","#ff6f61"],sizes:"6-7-8-9",
+  name:{tr:"Erkek Çocuk Mont",en:"Boys' Puffer Jacket",ru:"Куртка для мальчика",ar:"جاكيت أولاد منفوخ"},
+  fabric:{tr:"Su itici kumaş, elyaf dolgu",en:"Water-repellent, fiber fill",ru:"Водоотталкивающая ткань, синтепон",ar:"قماش مقاوم للماء، حشوة ألياف"}},
+ {id:"MS-2609",cat:"girl",shape:"dress",bg:"#fff4d6",c:["#ffd166","#ff6f61","#ffffff"],sizes:"2-3-4-5",
+  name:{tr:"Fırfırlı Yazlık Elbise",en:"Ruffled Summer Dress",ru:"Летнее платье с воланами",ar:"فستان صيفي بكشكش"},
+  fabric:{tr:"%100 Pamuk Müslin",en:"100% Cotton Muslin",ru:"100% хлопок, муслин",ar:"قطن ١٠٠٪ موسلين"}},
+ {id:"MS-2610",cat:"boy",shape:"set",bg:"#e3f0ff",c:["#ff6f61","#4d96ff","#ffd166"],sizes:"9-10-11-12",
+  name:{tr:"Şort T-Shirt Takım",en:"Shorts & T-Shirt Set",ru:"Комплект шорты + футболка",ar:"طقم شورت وتيشيرت"},
+  fabric:{tr:"%100 Pamuk",en:"100% Cotton",ru:"100% хлопок",ar:"قطن ١٠٠٪"}},
+ {id:"MS-2611",cat:"girl",shape:"tee",bg:"#f3e8ff",c:["#c77dff","#ffffff","#ff8fa3"],sizes:"6-7-8-9",
+  name:{tr:"Payetli Kız T-Shirt",en:"Sequin Girls' T-Shirt",ru:"Футболка с пайетками",ar:"تيشيرت بنات بالترتر"},
+  fabric:{tr:"%100 Pamuk Süprem",en:"100% Cotton Single Jersey",ru:"100% хлопок, супрем",ar:"قطن ١٠٠٪ سوبريم"}},
+ {id:"MS-2612",cat:"baby",shape:"hoodie",bg:"#ffe3df",c:["#ff8fa3","#a0c4ff","#ffd166"],sizes:"6-9 / 9-12 / 12-18 / 18-24",baby:true,
+  name:{tr:"Bebek Kapüşonlu Hırka",en:"Baby Hooded Cardigan",ru:"Кофта с капюшоном для малыша",ar:"جاكيت رضّع بقبعة"},
+  fabric:{tr:"Welsoft Peluş",en:"Soft Plush Welsoft",ru:"Велсофт",ar:"قماش ويلسوفت ناعم"}}
+];
+const COLOR_NAMES = {tr:"renk",en:"colors",ru:"цв.",ar:"ألوان"};
+
+/* ======== SVG GARMENT ILLUSTRATIONS ======== */
+function garment(shape, col, accent){
+  const s = 'stroke="rgba(43,35,64,.18)" stroke-width="2" stroke-linejoin="round"';
+  const dots = `<g fill="${accent}" opacity=".9"><circle cx="80" cy="120" r="5"/><circle cx="110" cy="140" r="5"/><circle cx="125" cy="110" r="5"/><circle cx="95" cy="165" r="5"/><circle cx="70" cy="160" r="4"/><circle cx="130" cy="170" r="4"/></g>`;
+  const map = {
+    dress:`<path d="M75 30 Q100 45 125 30 L135 60 L125 80 L165 190 Q100 205 35 190 L75 80 L65 60Z" fill="${col}" ${s}/><path d="M75 80 Q100 92 125 80" fill="none" stroke="${accent}" stroke-width="6"/>${dots}`,
+    tee:`<path d="M70 35 Q100 52 130 35 L175 60 L160 95 L140 85 L140 185 L60 185 L60 85 L40 95 L25 60Z" fill="${col}" ${s}/><circle cx="100" cy="115" r="26" fill="${accent}" opacity=".9"/><path d="M88 112 l8 8 l16 -16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>`,
+    hoodie:`<path d="M72 40 Q100 10 128 40 L175 62 L170 160 L148 160 L145 95 L145 185 L55 185 L55 95 L52 160 L30 160 L25 62Z" fill="${col}" ${s}/><path d="M78 40 Q100 70 122 40" fill="none" stroke="rgba(43,35,64,.25)" stroke-width="3"/><rect x="72" y="135" width="56" height="30" rx="8" fill="${accent}" opacity=".85"/><path d="M92 55 v26 M108 55 v26" stroke="#fff" stroke-width="3"/>`,
+    set:`<path d="M65 22 Q100 36 135 22 L168 42 L156 70 L140 64 L140 110 L60 110 L60 64 L44 70 L32 42Z" fill="${col}" ${s}/><path d="M62 114 L138 114 L144 192 L108 192 L100 140 L92 192 L56 192Z" fill="${accent}" ${s}/><path d="M60 98 H140" stroke="${accent}" stroke-width="6"/>`,
+    romper:`<path d="M72 30 Q100 46 128 30 L160 50 L148 76 L138 72 L142 140 L130 188 L106 188 L100 160 L94 188 L70 188 L58 140 L62 72 L52 76 L40 50Z" fill="${col}" ${s}/><circle cx="100" cy="105" r="20" fill="#c99868"/><circle cx="86" cy="88" r="8" fill="#c99868"/><circle cx="114" cy="88" r="8" fill="#c99868"/><circle cx="93" cy="103" r="2.5" fill="#2b2340"/><circle cx="107" cy="103" r="2.5" fill="#2b2340"/><ellipse cx="100" cy="112" rx="5" ry="3.5" fill="#2b2340"/>`,
+    jacket:`<path d="M70 30 Q100 18 130 30 L172 55 L168 170 L146 170 L144 100 L144 190 L56 190 L56 100 L54 170 L32 170 L28 55Z" fill="${col}" ${s}/><path d="M100 32 V190" stroke="${accent}" stroke-width="4"/><path d="M56 75 H144 M56 110 H144 M56 145 H144" stroke="rgba(255,255,255,.25)" stroke-width="3"/><rect x="66" y="120" width="22" height="6" rx="3" fill="${accent}"/><rect x="112" y="120" width="22" height="6" rx="3" fill="${accent}"/>`
+  };
+  return `<svg viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg" role="img">${map[shape]}</svg>`;
+}
+
+/* ======== STATE ======== */
+let lang = "tr", filter = "all";
+let cart = {};
+try { cart = JSON.parse(localStorage.getItem("msk_cart")||"{}") || {}; } catch(e){}
+try { const l = localStorage.getItem("msk_lang"); if (T[l]) lang = l; } catch(e){}
+const urlLang = new URLSearchParams(location.search).get("lang"); if (T[urlLang]) lang = urlLang;
+const saveCart = () => { try { localStorage.setItem("msk_cart", JSON.stringify(cart)); } catch(e){} };
+const t = k => T[lang][k];
+const waUrl = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+const byId = id => P.find(p => p.id === id);
+
+function applyLang(){
+  const rtl = lang === "ar";
+  document.documentElement.lang = lang;
+  document.documentElement.dir = rtl ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const v = t(el.dataset.i18n);
+    if (/<b>|<em>/.test(v)) el.innerHTML = v; else el.textContent = v;
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(el => el.innerHTML = t(el.dataset.i18nHtml));
+  document.querySelectorAll(".langs button").forEach(b => b.classList.toggle("on", b.dataset.lang === lang));
+  document.querySelectorAll(".wa-link").forEach(a => a.href = waUrl(t("waHello")));
+  const sel = document.getElementById("countrySel"), prev = sel.selectedIndex;
+  sel.innerHTML = t("countries").map(c => `<option>${c}</option>`).join("");
+  sel.selectedIndex = prev > 0 ? prev : 0;
+  renderFilters(); renderGrid(); renderCart();
+  try { localStorage.setItem("msk_lang", lang); } catch(e){}
+}
+
+function renderFilters(){
+  const f = [["all","fAll"],["baby","fBaby"],["girl","fGirl"],["boy","fBoy"],["set","fSet"]];
+  document.getElementById("filters").innerHTML = f.map(([k,l]) =>
+    `<button class="chip ${filter===k?"on":""}" data-f="${k}">${t(l)}</button>`).join("");
+}
+
+function sizeLabel(p){ return p.sizes + " " + (p.baby ? t("monthShort") : t("yearShort")); }
+
+function renderGrid(){
+  const list = P.filter(p => filter==="all" || (filter==="set" ? p.shape==="set" : p.cat===filter));
+  document.getElementById("grid").innerHTML = list.map(p => `
+    <article class="prod">
+      <div class="prod-img" style="background:${p.bg}" data-open="${p.id}">
+        ${p.tag ? `<span class="tag ${p.tag==="new"?"new":""}">${t(p.tag==="new"?"tagNew":"tagBest")}</span>` : ""}
+        ${garment(p.shape, p.c[0], p.c[1])}
+      </div>
+      <div class="prod-body">
+        <span class="code">${p.id}</span>
+        <h3>${p.name[lang]}</h3>
+        <div class="meta"><span>📏 ${sizeLabel(p)}</span><span>📦 ${t("pack4")}</span></div>
+        <div class="swatches">${p.c.map(c=>`<i style="background:${c}"></i>`).join("")}</div>
+        <div class="prod-foot">
+          <button class="add ${cart[p.id]?"in":""}" data-add="${p.id}">${cart[p.id]?t("added"):t("add")}</button>
+          <button class="det" data-open="${p.id}">${t("details")}</button>
+        </div>
+      </div>
+    </article>`).join("");
+}
+
+function renderCart(){
+  const ids = Object.keys(cart).filter(byId);
+  document.getElementById("cartN").textContent = ids.reduce((s,id)=>s+cart[id],0);
+  const box = document.getElementById("qlist");
+  if (!ids.length){ box.innerHTML = `<div class="empty">${t("qEmpty")}</div>`; return; }
+  box.innerHTML = ids.map(id => { const p = byId(id); return `
+    <div class="qitem">
+      <div class="qthumb" style="background:${p.bg}">${garment(p.shape,p.c[0],p.c[1])}</div>
+      <div class="qinfo"><b>${p.name[lang]}</b><small>${p.id} · ${sizeLabel(p)}</small></div>
+      <div class="qty"><button data-dec="${id}" aria-label="-">−</button><span>${cart[id]}</span><button data-inc="${id}" aria-label="+">+</button><small>${t("series")}</small></div>
+      <button class="rm" data-rm="${id}" aria-label="remove">×</button>
+    </div>`; }).join("");
+}
+
+function openModal(id){
+  const p = byId(id);
+  document.getElementById("mImg").style.background = p.bg;
+  document.getElementById("mImg").innerHTML = garment(p.shape,p.c[0],p.c[1]);
+  document.getElementById("mBody").innerHTML = `
+    <span class="code">${p.id}</span>
+    <h3>${p.name[lang]}</h3>
+    <table class="spec">
+      <tr><td>${t("sizes")}</td><td>${sizeLabel(p)}</td></tr>
+      <tr><td>${t("series")}</td><td>${t("pack4")}</td></tr>
+      <tr><td>${t("fabric")}</td><td>${p.fabric[lang]}</td></tr>
+      <tr><td>${t("colors")}</td><td><div class="swatches">${p.c.map(c=>`<i style="background:${c}"></i>`).join("")}</div></td></tr>
+      <tr><td>${t("minOrder")}</td><td>${t("series1")}</td></tr>
+    </table>
+    <b>${t("priceOnReq")}</b>
+    <button class="btn btn-primary" data-add="${p.id}">${cart[p.id]?t("added"):t("add")}</button>
+    <a class="btn btn-wa" target="_blank" rel="noopener" href="${waUrl(t("waProduct")+"\n"+p.id+" – "+p.name[lang]+" ("+sizeLabel(p)+")")}">💬 WhatsApp</a>`;
+  document.getElementById("modal").classList.add("open");
+}
+function closeModal(){ document.getElementById("modal").classList.remove("open"); }
+
+function toast(msg){
+  const el = document.getElementById("toast"); el.textContent = msg; el.classList.add("show");
+  clearTimeout(toast.t); toast.t = setTimeout(()=>el.classList.remove("show"), 1800);
+}
+
+function heroArt(){
+  const picks = [P[0],P[1],P[2]];
+  const pos = [["8%","10%","46%"],["48%","26%","44%"],["16%","54%","40%"]];
+  document.getElementById("heroArt").innerHTML =
+    `<div class="blob" style="width:60%;height:60%;background:var(--sun);opacity:.35;top:-10%;right:-10%"></div>
+     <div class="blob" style="width:50%;height:50%;background:var(--accent);opacity:.25;bottom:-12%;left:-8%"></div>` +
+    picks.map((p,i)=>`<div class="card" style="left:${pos[i][0]};top:${pos[i][1]};width:${pos[i][2]};background:${p.bg}">${garment(p.shape,p.c[0],p.c[1])}</div>`).join("") +
+    `<div class="badge-float" style="right:6%;bottom:8%">⭐ <span data-i18n="tagNew">${t("tagNew")}</span> 2026</div>`;
+}
+
+/* ======== EVENTS ======== */
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-lang],[data-f],[data-add],[data-open],[data-inc],[data-dec],[data-rm]");
+  if (!b) { if (e.target.id === "modal") closeModal(); return; }
+  const d = b.dataset;
+  if (d.lang){ lang = d.lang; applyLang(); heroArt(); }
+  else if (d.f){ filter = d.f; renderFilters(); renderGrid(); }
+  else if (d.add){
+    if (cart[d.add]) delete cart[d.add]; else { cart[d.add] = 1; toast(t("toastAdd")); }
+    saveCart(); renderGrid(); renderCart();
+    if (document.getElementById("modal").classList.contains("open")) openModal(d.add);
+  }
+  else if (d.open){ openModal(d.open); }
+  else if (d.inc){ cart[d.inc]++; saveCart(); renderCart(); }
+  else if (d.dec){ cart[d.dec] = Math.max(1, cart[d.dec]-1); saveCart(); renderCart(); }
+  else if (d.rm){ delete cart[d.rm]; saveCart(); renderCart(); renderGrid(); }
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+
+function buildMessage(f){
+  const ids = Object.keys(cart).filter(byId);
+  let m = (ids.length ? t("waQuote") : t("waHello")) + "\n\n";
+  ids.forEach(id => { const p = byId(id); m += `• ${p.id} – ${p.name[lang]} (${sizeLabel(p)}) × ${cart[id]} ${t("series")}\n`; });
+  m += `\n${t("wName")}: ${f.name.value}\n`;
+  if (f.company.value) m += `${t("wCompany")}: ${f.company.value}\n`;
+  m += `${t("wCountry")}: ${f.country.value}\n${t("wPhone")}: ${f.phone.value}\n`;
+  if (f.note.value) m += `${t("wNote")}: ${f.note.value}\n`;
+  return m;
+}
+function valid(f){
+  if (!f.name.value.trim() || !f.phone.value.trim()){ toast(t("fErr")); return false; }
+  return true;
+}
+const form = document.getElementById("qform");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  if (!valid(form)) return;
+  window.open(waUrl(buildMessage(form)), "_blank", "noopener");
+});
+document.getElementById("sendForm").addEventListener("click", () => {
+  if (!valid(form)) return;
+  document.getElementById("okMsg").style.display = "block";
+  form.reset(); cart = {}; saveCart(); renderCart(); renderGrid();
+});
+
+applyLang(); heroArt();
+</script>
+</body>
+</html>
